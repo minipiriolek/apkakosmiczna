@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="apkakosmiczna/App.axaml" value="apkakosmiczna/apkakosmiczna.csproj" />
+        <entry key="apkakosmiczna/Views/DetailedScreen.axaml" value="apkakosmiczna/apkakosmiczna.csproj" />
         <entry key="apkakosmiczna/Views/MainWindow.axaml" value="apkakosmiczna/apkakosmiczna.csproj" />
       </map>
     </option>

@@ -76,6 +76,7 @@
 /home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/obj/Debug/net9.0/apkakosmiczna.pdb
 /home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/obj/Debug/net9.0/apkakosmiczna.genruntimeconfig.cache
 /home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/obj/Debug/net9.0/ref/apkakosmiczna.dll
+/home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/obj/Debug/net9.0/apkakosmiczna.sourcelink.json
 /home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/bin/Debug/net9.0/apkakosmiczna
 /home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/bin/Debug/net9.0/apkakosmiczna.deps.json
 /home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/bin/Debug/net9.0/apkakosmiczna.runtimeconfig.json

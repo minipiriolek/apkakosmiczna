@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj": {}
+    "/home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj": {}
   },
   "projects": {
-    "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj": {
+    "/home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj",
+        "projectUniqueName": "/home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj",
         "projectName": "apkakosmiczna",
-        "projectPath": "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj",
-        "packagesPath": "/home/jakub/.nuget/packages/",
-        "outputPath": "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/obj/",
+        "projectPath": "/home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj",
+        "packagesPath": "/home/olo/.nuget/packages/",
+        "outputPath": "/home/olo/RiderProjects/apkakosmiczna/apkakosmiczna/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/jakub/.nuget/NuGet/NuGet.Config"
+          "/home/olo/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
