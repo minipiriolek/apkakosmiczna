@@ -1,23 +1,20 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:apkakosmiczna.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:viewModels="clr-namespace:apkakosmiczna.ViewModels"
         x:Class="apkakosmiczna.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="apkakosmiczna">
+        Title="Filmy"
+        x:DataType="viewModels:MainWindowViewModel">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <Window.DataContext>
         <vm:MainWindowViewModel/>
-    </Design.DataContext>
+    </Window.DataContext>
+
     <StackPanel>
-        <TextBlock Text="Filmy: "/>
-    
-        <ListBox ItemsSource="{Binding Films }">
+        <TextBlock Text="Filmy:" FontWeight="Bold" Margin="0,0,0,5"/>
+        <ListBox x:Name="FilmsList"
+                 ItemsSource="{Binding Films}"
+                 SelectionChanged="FilmsList_SelectionChanged">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Spacing="10">
@@ -30,6 +27,4 @@
             </ListBox.ItemTemplate>
         </ListBox>
     </StackPanel>
-   
-
 </Window>

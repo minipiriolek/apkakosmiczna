@@ -5,6 +5,8 @@ namespace apkakosmiczna.ViewModels;
 
 public class MainWindowViewModel : ViewModelBase
 {
+
+
     public ObservableCollection<FilmList> Films { get; } = new()
     {
         new FilmList
@@ -113,4 +115,15 @@ public class MainWindowViewModel : ViewModelBase
                 "Film pierwotnie miał nosić tytuł „Paradise Lost”; Scott planował jeszcze jedną część łączącą fabułę z oryginalnym „Obcym”."
         }
     };
+
+    private FilmList _selectedFilm;
+    
+    [Reactive]
+    public string NewItem { get; set; } = string.Empty;
+
+    [Reactive]
+    public string? SelectedItem { get; set; }
+    
+
+
 }
