@@ -119,18 +119,43 @@ public class MainWindowViewModel : ViewModelBase
         }
     };
 
-    private FilmList _selectedFilm;
-    
-    [Reactive]
-    public string NewItem { get; set; } = string.Empty;
+    public ReactiveCommand<FilmList?, Unit> RemoveFilmCommand { get; }
+    public ReactiveCommand<Unit, Unit> AddItemCommand { get; }
 
     [Reactive]
-    public string? SelectedItem { get; set; }
+    public FilmList? SelectedItem { get; set; }
     
-    public ReactiveCommand<Unit, Unit> AddFilmCommand { get; }
-    public ReactiveCommand<string?, Unit> RemoveFilmCommand { get; }
+    [Reactive]
+    public string NewFilm { get; set; } = string.Empty;
     
-    
+    [Reactive]
+    public FilmList NewFilmEntry { get; set; } = new FilmList 
+    {
+        MainCharacters = new List<string>(), 
+        
+    };
+
+    public MainWindowViewModel()
+    {
+        
+        AddItemCommand = ReactiveCommand.Create(() =>
+        {
+  
+            Films.Add(NewFilmEntry); 
+            
+            NewFilmEntry = new FilmList 
+            {
+                MainCharacters = new List<string>()
+            };
+        });
+        
+        
+        RemoveFilmCommand = ReactiveCommand.Create<FilmList?>(Film =>
+        {
+            if (Film == null || !Films.Contains(Film)) return;
+            Films.Remove(Film);
+        });
+    }
 
 
 }

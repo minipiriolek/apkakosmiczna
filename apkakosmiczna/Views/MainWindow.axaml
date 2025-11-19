@@ -11,28 +11,100 @@
     </Window.DataContext>
 
     <StackPanel>
-        <TextBlock Text="Filmy:" FontWeight="Bold" Margin="0,0,0,5"/>
-        <ListBox x:Name="FilmsList"
-                 ItemsSource="{Binding Films}"
-                 >
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Spacing="10">
-                        <TextBlock Text="{Binding Title}" FontWeight="Bold"/>
-                        <TextBlock Text="(" />
-                        <TextBlock Text="{Binding Genre}" />
-                        <TextBlock Text=")" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <StackPanel
+            Orientation="Vertical" 
+            Margin="10, 15, 10, 10"
+            Spacing="8"
+            >
+            <TextBlock Text="Filmy:" FontWeight="Bold" Margin="0,0,0,5" FontSize="16"/>
+            <ListBox x:Name="FilmsList"
+                     ItemsSource="{Binding Films}"
+                     SelectedItem="{Binding SelectedItem}"
+            >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Spacing="10">
+                            <TextBlock Text="{Binding Title}" FontWeight="Bold"/>
+                            <TextBlock Text="(" />
+                            <TextBlock  Text="{Binding Genre}"/>
+                            <TextBlock Text=")" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            
+        </StackPanel>
         
         
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="15">
-            <Button Content="Delete Selected"
+        <Separator Margin="0, 5"/>
+        
+        <StackPanel 
+            Orientation="Vertical" 
+            Margin="10, 15, 10, 10"
+            Spacing="8"
+        >
+            <TextBlock Text="Wprowadź szczegóły nowego filmu:" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
+
+            <TextBlock Text="1. Tytuł:"/>
+            <TextBox Text="{Binding NewFilmEntry.Title}" Watermark="Np. Alien" />
+            
+            <TextBlock Text="2. Polski tytuł:"/>
+            <TextBox Text="{Binding NewFilmEntry.PolishTitle}"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="15">
+                <StackPanel Width="120">
+                    <TextBlock Text="Rok:"/>
+                    <TextBox Text="{Binding NewFilmEntry.Year}" Watermark="1979" />
+                </StackPanel>
+                <StackPanel Width="120">
+                    <TextBlock Text="Długość: "/>
+                    <TextBox Text="{Binding NewFilmEntry.Lenght}" Watermark="117" />
+                </StackPanel>
+                 <StackPanel Width="120">
+                    <TextBlock Text="Ocena:"/>
+                    <TextBox Text="{Binding NewFilmEntry.Rating}" Watermark="8,5" />
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock Text="6. Reżyser:"/>
+            <TextBox Text="{Binding NewFilmEntry.Director}"/>
+                
+            <TextBlock Text="7. Gatunek:"/>
+            <TextBox Text="{Binding NewFilmEntry.Genre}"/>
+
+            <TextBlock Text="8. Statek Kosmiczny:"/>
+            <TextBox Text="{Binding NewFilmEntry.SpaceShip}"/>
+
+            <TextBlock Text="9. Opis Fabuły:"/>
+            <TextBox Text="{Binding NewFilmEntry.Description}" Height="70" />
+
+            <TextBlock Text="10. Ciekawostka:"/>
+            <TextBox Text="{Binding NewFilmEntry.FunFact}" Height="50" />
+            
+            <Separator Margin="0, 5"/>
+        </StackPanel>
+            
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="15" Margin="0, 15, 0, 0">
+    
+            <Button Content="Zapisz i dodaj Film"
+                    Command="{Binding AddItemCommand}"
+                    Width="150" 
+                    Height="35"
+            
+                    Background="#4CAF50" 
+                    Foreground="White"
+                    CornerRadius="8"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+            />
+
+            <Button Content="Usuń zaznaczone"
                     Command="{Binding RemoveFilmCommand}"
                     CommandParameter="{Binding SelectedItem}"
-                    Width="150" Height="35"
+                    Width="150" 
+                    Height="35"
+            
                     Background="#E53935"
                     Foreground="White"
                     CornerRadius="8"
@@ -40,8 +112,10 @@
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
             />
+    
         </StackPanel>
         
+        </StackPanel>
         
-    </StackPanel>
+    
 </Window>
