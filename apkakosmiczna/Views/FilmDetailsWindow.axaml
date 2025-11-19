@@ -1,0 +1,11 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:apkakosmiczna.ViewModels"
+        xmlns:views="clr-namespace:apkakosmiczna.Views"
+        x:Class="apkakosmiczna.Views.FilmDetailsWindow"
+        Title="Szczegóły Filmu"
+        Width="500" Height="650"
+        x:DataType="vm:FilmDetailsViewModel">
+    
+    <views:FilmDetailsView/> 
+</Window>

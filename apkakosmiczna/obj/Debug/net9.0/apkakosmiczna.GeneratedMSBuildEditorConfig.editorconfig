@@ -24,5 +24,11 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/jawor/RiderProjects/apkakosmiczna/apkakosmiczna/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/jawor/RiderProjects/apkakosmiczna/apkakosmiczna/Views/FilmDetailsView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/jawor/RiderProjects/apkakosmiczna/apkakosmiczna/Views/FilmDetailsWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/jawor/RiderProjects/apkakosmiczna/apkakosmiczna/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

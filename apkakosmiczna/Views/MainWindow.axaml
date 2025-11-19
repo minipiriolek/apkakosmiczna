@@ -9,7 +9,7 @@
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
-
+    <ScrollViewer>
     <StackPanel>
         <StackPanel
             Orientation="Vertical" 
@@ -45,10 +45,10 @@
         >
             <TextBlock Text="Wprowadź szczegóły nowego filmu:" FontWeight="Bold" FontSize="16" Margin="0,0,0,5"/>
 
-            <TextBlock Text="1. Tytuł:"/>
+            <TextBlock Text="Tytuł:"/>
             <TextBox Text="{Binding NewFilmEntry.Title}" Watermark="Np. Alien" />
             
-            <TextBlock Text="2. Polski tytuł:"/>
+            <TextBlock Text="Polski tytuł:"/>
             <TextBox Text="{Binding NewFilmEntry.PolishTitle}"/>
 
             <StackPanel Orientation="Horizontal" Spacing="15">
@@ -66,19 +66,19 @@
                 </StackPanel>
             </StackPanel>
 
-            <TextBlock Text="6. Reżyser:"/>
+            <TextBlock Text="Reżyser:"/>
             <TextBox Text="{Binding NewFilmEntry.Director}"/>
                 
-            <TextBlock Text="7. Gatunek:"/>
+            <TextBlock Text="Gatunek:"/>
             <TextBox Text="{Binding NewFilmEntry.Genre}"/>
 
-            <TextBlock Text="8. Statek Kosmiczny:"/>
+            <TextBlock Text="Statek Kosmiczny:"/>
             <TextBox Text="{Binding NewFilmEntry.SpaceShip}"/>
 
-            <TextBlock Text="9. Opis Fabuły:"/>
+            <TextBlock Text="Opis Fabuły:"/>
             <TextBox Text="{Binding NewFilmEntry.Description}" Height="70" />
 
-            <TextBlock Text="10. Ciekawostka:"/>
+            <TextBlock Text="Ciekawostka:"/>
             <TextBox Text="{Binding NewFilmEntry.FunFact}" Height="50" />
             
             <Separator Margin="0, 5"/>
@@ -116,6 +116,6 @@
         </StackPanel>
         
         </StackPanel>
-        
+    </ScrollViewer>
     
 </Window>

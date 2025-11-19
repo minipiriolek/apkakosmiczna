@@ -1,0 +1,13 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:apkakosmiczna.ViewModels"
+             x:Class="apkakosmiczna.Views.FilmDetailsView"
+             x:DataType="vm:FilmDetailsViewModel"
+             Width="450" Height="600">
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="15" Spacing="10">
+            <TextBlock Text="{Binding Film.Title}" FontSize="24" FontWeight="Bold"/>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

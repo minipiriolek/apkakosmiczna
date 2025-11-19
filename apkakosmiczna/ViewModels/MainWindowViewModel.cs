@@ -127,13 +127,9 @@ public class MainWindowViewModel : ViewModelBase
     
     [Reactive]
     public string NewFilm { get; set; } = string.Empty;
-    
-    [Reactive]
-    public FilmList NewFilmEntry { get; set; } = new FilmList 
-    {
-        MainCharacters = new List<string>(), 
-        
-    };
+
+    [Reactive] 
+    public FilmList NewFilmEntry { get; set; } = new FilmList();
 
     public MainWindowViewModel()
     {
@@ -141,12 +137,9 @@ public class MainWindowViewModel : ViewModelBase
         AddItemCommand = ReactiveCommand.Create(() =>
         {
   
-            Films.Add(NewFilmEntry); 
-            
-            NewFilmEntry = new FilmList 
-            {
-                MainCharacters = new List<string>()
-            };
+            Films.Add(NewFilmEntry);
+
+            NewFilmEntry = new FilmList();
         });
         
         
