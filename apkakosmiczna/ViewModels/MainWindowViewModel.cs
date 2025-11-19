@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Reactive;
+using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 
 namespace apkakosmiczna.ViewModels;
 
@@ -123,6 +126,10 @@ public class MainWindowViewModel : ViewModelBase
 
     [Reactive]
     public string? SelectedItem { get; set; }
+    
+    public ReactiveCommand<Unit, Unit> AddFilmCommand { get; }
+    public ReactiveCommand<string?, Unit> RemoveFilmCommand { get; }
+    
     
 
 

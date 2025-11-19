@@ -14,7 +14,7 @@
         <TextBlock Text="Filmy:" FontWeight="Bold" Margin="0,0,0,5"/>
         <ListBox x:Name="FilmsList"
                  ItemsSource="{Binding Films}"
-                 SelectionChanged="FilmsList_SelectionChanged">
+                 >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Spacing="10">
@@ -26,5 +26,22 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="15">
+            <Button Content="Delete Selected"
+                    Command="{Binding RemoveFilmCommand}"
+                    CommandParameter="{Binding SelectedItem}"
+                    Width="150" Height="35"
+                    Background="#E53935"
+                    Foreground="White"
+                    CornerRadius="8"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+            />
+        </StackPanel>
+        
+        
     </StackPanel>
 </Window>

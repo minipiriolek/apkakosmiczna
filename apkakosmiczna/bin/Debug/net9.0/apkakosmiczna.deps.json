@@ -13,7 +13,8 @@
           "Avalonia.Diagnostics": "11.3.4",
           "Avalonia.Fonts.Inter": "11.3.4",
           "Avalonia.ReactiveUI": "11.3.4",
-          "Avalonia.Themes.Fluent": "11.3.4"
+          "Avalonia.Themes.Fluent": "11.3.4",
+          "ReactiveUI.Fody": "19.5.41"
         },
         "runtime": {
           "apkakosmiczna.dll": {}
@@ -273,6 +274,7 @@
           }
         }
       },
+      "Fody/6.8.0": {},
       "HarfBuzzSharp/8.3.1.1": {
         "dependencies": {
           "HarfBuzzSharp.NativeAssets.Win32": "8.3.1.1",
@@ -391,6 +393,18 @@
           "lib/net8.0/ReactiveUI.dll": {
             "assemblyVersion": "20.1.0.0",
             "fileVersion": "20.1.1.46356"
+          }
+        }
+      },
+      "ReactiveUI.Fody/19.5.41": {
+        "dependencies": {
+          "Fody": "6.8.0",
+          "ReactiveUI": "20.1.1"
+        },
+        "runtime": {
+          "lib/net8.0/ReactiveUI.Fody.Helpers.dll": {
+            "assemblyVersion": "19.5.0.0",
+            "fileVersion": "19.5.41.25387"
           }
         }
       },
@@ -618,6 +632,13 @@
       "path": "dynamicdata/8.4.1",
       "hashPath": "dynamicdata.8.4.1.nupkg.sha512"
     },
+    "Fody/6.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hfZ/f8Mezt8aTkgv9nsvFdYoQ809/AqwsJlOGOPYIfBcG2aAIG3v3ex9d8ZqQuFYyMoucjRg4eKy3VleeGodKQ==",
+      "path": "fody/6.8.0",
+      "hashPath": "fody.6.8.0.nupkg.sha512"
+    },
     "HarfBuzzSharp/8.3.1.1": {
       "type": "package",
       "serviceable": true,
@@ -666,6 +687,13 @@
       "sha512": "sha512-9hNPknWjijnaSWs6auypoXqUptPZcRpUypF+cf1zD50fgW+SEoQda502N3fVZ2eWPcaiUad+z6GaLwOWmUVHNw==",
       "path": "reactiveui/20.1.1",
       "hashPath": "reactiveui.20.1.1.nupkg.sha512"
+    },
+    "ReactiveUI.Fody/19.5.41": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bh6OH1WsSHf/ryUVaPnI6LWl1+lrCvq4L/AoHpzPXCKxtR4p0ogPVONnkq0jYgSQ55x7YNCVkthBKeb6uUSbpg==",
+      "path": "reactiveui.fody/19.5.41",
+      "hashPath": "reactiveui.fody.19.5.41.nupkg.sha512"
     },
     "SkiaSharp/2.88.9": {
       "type": "package",
