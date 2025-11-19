@@ -86,7 +86,7 @@
             
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="15" Margin="0, 15, 0, 0">
     
-            <Button Content="Zapisz i dodaj Film"
+            <Button Content="dodaj film"
                     Command="{Binding AddItemCommand}"
                     Width="150" 
                     Height="35"
@@ -113,14 +113,18 @@
                     VerticalContentAlignment="Center"
             />
             
-            <Button Content="Pokaż Szczegóły Filmu"
+            <Button Content="Pokaż szczegóły"
                     Command="{Binding SummaryButton}"
-                    HorizontalAlignment="Center"
-                    Margin="0, 15, 0, 0"
-                    Padding="15, 5"
-                    Background="#007BFF"
+                    Width="150" 
+                    Height="35"
+                    Background="#007BFF"  
                     Foreground="White"
-                    FontWeight="SemiBold"/>
+                    CornerRadius="8"
+                    FontWeight="SemiBold"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    
+            />
     
         </StackPanel>
         

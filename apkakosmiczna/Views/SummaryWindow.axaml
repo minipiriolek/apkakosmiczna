@@ -7,10 +7,66 @@
         x:Class="apkakosmiczna.Views.SummaryWindow"
         Title="SummaryWindow"
         x:DataType="vm:SummaryWindowViewModel">
-    <StackPanel Margin="20" Spacing="10">
+    <StackPanel Margin="15" Spacing="10">
         
+        <TextBlock Text="Szczegóły Wybranego Filmu" 
+                   FontSize="18" 
+                   FontWeight="Bold" 
+                   HorizontalAlignment="Center" 
+                   Margin="0,0,0,10"/>
         
+        <TextBlock>
+            <Run Text="Tytuł: "/>
+            <Run Text="{Binding FilmDetails.Title}"/>
+        </TextBlock>
+
+        <TextBlock>
+            <Run Text="Tytuł Polski: "/>
+            <Run Text="{Binding FilmDetails.PolishTitle}"/>
+        </TextBlock>
+
+        <TextBlock>
+            <Run Text="Reżyser: "/>
+            <Run Text="{Binding FilmDetails.Director}"/>
+        </TextBlock>
+
+        <TextBlock>
+            <Run Text="Rok: "/>
+            <Run Text="{Binding FilmDetails.Year}"/>
+        </TextBlock>
         
+        <TextBlock>
+            <Run Text="Gatunek: "/>
+            <Run Text="{Binding FilmDetails.Genre}"/>
+        </TextBlock>
         
+        <StackPanel Orientation="Horizontal">
+            <ProgressBar Minimum="0" Maximum="10" Value="{Binding FilmDetails.Rating }" Height="20" Width="200" />
+            <TextBlock Text=" "></TextBlock>
+            <TextBlock Text="Ocena: " />
+            <TextBlock Text="{Binding FilmDetails.Rating}" />
+            <TextBlock Text="/10"/>
+        </StackPanel>
+        
+        <TextBlock>
+            <Run Text="Bohaterowie: "/>
+            <Run Text="{Binding MainCharactersString}"/>
+        </TextBlock>
+        
+        <TextBlock>
+            <Run Text="Statek kosmiczny: "/>
+            <Run Text="{Binding FilmDetails.SpaceShip}"/>
+        </TextBlock>
+        
+        <TextBlock>
+            <Run Text="Opis: "/>
+            <Run Text="{Binding FilmDetails.Description}"/>
+        </TextBlock>
+        
+        <TextBlock>
+            <Run Text="Ciekawostka: "/>
+            <Run Text="{Binding FilmDetails.FunFact}"/>
+        </TextBlock>
     </StackPanel>
+   
 </Window>

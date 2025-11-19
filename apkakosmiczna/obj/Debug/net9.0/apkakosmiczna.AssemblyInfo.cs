@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("apkakosmiczna")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f2700bbd5e6f8230d201759ccaeb94fa2bfdf8d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+acf0a14409b7613823f572bb3895e9e92d6d7690")]
 [assembly: System.Reflection.AssemblyProductAttribute("apkakosmiczna")]
 [assembly: System.Reflection.AssemblyTitleAttribute("apkakosmiczna")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
