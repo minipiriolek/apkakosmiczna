@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 
+namespace apkakosmiczna.Models;
+
 public class FilmList
 {
     public string Title { get; set; } = "";

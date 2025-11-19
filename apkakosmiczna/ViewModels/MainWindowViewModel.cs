@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Reactive;
+using System.Reactive.Linq;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
+using apkakosmiczna.Models;
 
 namespace apkakosmiczna.ViewModels;
 
@@ -121,6 +123,9 @@ public class MainWindowViewModel : ViewModelBase
 
     public ReactiveCommand<FilmList?, Unit> RemoveFilmCommand { get; }
     public ReactiveCommand<Unit, Unit> AddItemCommand { get; }
+    
+    public ReactiveCommand<Unit, Unit> SummaryButton { get; }
+
 
     [Reactive]
     public FilmList? SelectedItem { get; set; }
@@ -130,25 +135,40 @@ public class MainWindowViewModel : ViewModelBase
 
     [Reactive] 
     public FilmList NewFilmEntry { get; set; } = new FilmList();
+    
+    public ReactiveCommand<Unit, Unit> ShowSummaryCommand { get; }
+    public Interaction<FilmList, Unit> ShowSummaryWindow { get; } 
+    
+    [Reactive] 
+    public string Name { get; set; } = "";
 
     public MainWindowViewModel()
     {
-        
         AddItemCommand = ReactiveCommand.Create(() =>
         {
-  
             Films.Add(NewFilmEntry);
-
             NewFilmEntry = new FilmList();
         });
-        
-        
+    
         RemoveFilmCommand = ReactiveCommand.Create<FilmList?>(Film =>
         {
             if (Film == null || !Films.Contains(Film)) return;
             Films.Remove(Film);
         });
+    
+        ShowSummaryWindow = new Interaction<FilmList, Unit>();
+
+        var canExecuteSummary = this.WhenAnyValue(x => x.SelectedItem)
+            .Select(film => film != null);
+
+        SummaryButton = ReactiveCommand.CreateFromTask(async () =>
+        {
+            await ShowSummaryWindow.Handle(SelectedItem!);
+        }, canExecuteSummary);
     }
-
-
+    
+    
+    
+    
+    
 }

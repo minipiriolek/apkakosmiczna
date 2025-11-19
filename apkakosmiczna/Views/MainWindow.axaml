@@ -112,6 +112,15 @@
                     HorizontalContentAlignment="Center"
                     VerticalContentAlignment="Center"
             />
+            
+            <Button Content="Pokaż Szczegóły Filmu"
+                    Command="{Binding SummaryButton}"
+                    HorizontalAlignment="Center"
+                    Margin="0, 15, 0, 0"
+                    Padding="15, 5"
+                    Background="#007BFF"
+                    Foreground="White"
+                    FontWeight="SemiBold"/>
     
         </StackPanel>
         
