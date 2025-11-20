@@ -11,7 +11,7 @@ public class FilmList
     public string Genre { get; set; } = "";
     public int? Lenght { get; set; }
     public double? Rating { get; set; }
-    public List<string> MainCharacters { get; set; }
+    public List<string> MainCharacters { get; set; } = new List<string>();
     public string SpaceShip { get; set; } = "";
     public string Description { get; set; } = "";
     public string FunFact { get; set; } = "";

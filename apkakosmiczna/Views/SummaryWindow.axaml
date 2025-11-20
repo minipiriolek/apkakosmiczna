@@ -6,7 +6,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="apkakosmiczna.Views.SummaryWindow"
         Title="SummaryWindow"
-        x:DataType="vm:SummaryWindowViewModel">
+        x:DataType="vm:SummaryWindowViewModel"
+        Height="500" Width="1000">
     <StackPanel Margin="15" Spacing="10">
         
         <TextBlock Text="Szczegóły Wybranego Filmu" 
@@ -67,6 +68,19 @@
             <Run Text="Ciekawostka: "/>
             <Run Text="{Binding FilmDetails.FunFact}"/>
         </TextBlock>
+        
+        <Button Content="Bohaterowie"
+                Command="{Binding CharactersButton }"
+                Width="150" 
+                Height="35"
+                Background="#EE0"  
+                Foreground="White"
+                CornerRadius="8"
+                FontWeight="SemiBold"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
+                    
+        />
     </StackPanel>
    
 </Window>

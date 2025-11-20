@@ -4,11 +4,13 @@
         xmlns:viewModels="clr-namespace:apkakosmiczna.ViewModels"
         x:Class="apkakosmiczna.Views.MainWindow"
         Title="Filmy"
-        x:DataType="viewModels:MainWindowViewModel">
+        x:DataType="viewModels:MainWindowViewModel"
+        Height="1000" Width="1700">
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
     </Window.DataContext>
+
     <ScrollViewer>
     <StackPanel>
         <StackPanel
@@ -86,7 +88,7 @@
             
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Spacing="15" Margin="0, 15, 0, 0">
     
-            <Button Content="dodaj film"
+            <Button Content="Dodaj film"
                     Command="{Binding AddItemCommand}"
                     Width="150" 
                     Height="35"
@@ -130,5 +132,4 @@
         
         </StackPanel>
     </ScrollViewer>
-    
 </Window>

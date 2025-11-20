@@ -1828,26 +1828,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jawor\\.nuget\\packages\\": {}
+    "/home/jakub/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jawor\\RiderProjects\\apkakosmiczna\\apkakosmiczna\\apkakosmiczna.csproj",
+      "projectUniqueName": "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj",
       "projectName": "apkakosmiczna",
-      "projectPath": "C:\\Users\\jawor\\RiderProjects\\apkakosmiczna\\apkakosmiczna\\apkakosmiczna.csproj",
-      "packagesPath": "C:\\Users\\jawor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jawor\\RiderProjects\\apkakosmiczna\\apkakosmiczna\\obj\\",
+      "projectPath": "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/apkakosmiczna.csproj",
+      "packagesPath": "/home/jakub/.nuget/packages/",
+      "outputPath": "/home/jakub/RiderProjects/apkakosmiczna/apkakosmiczna/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jawor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/jakub/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1864,7 +1863,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -1917,7 +1916,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\jawor\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.112/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

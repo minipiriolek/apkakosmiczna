@@ -136,7 +136,6 @@ public class MainWindowViewModel : ViewModelBase
     [Reactive] 
     public FilmList NewFilmEntry { get; set; } = new FilmList();
     
-    public ReactiveCommand<Unit, Unit> ShowSummaryCommand { get; }
     public Interaction<FilmList, Unit> ShowSummaryWindow { get; } 
     
     [Reactive] 
@@ -157,14 +156,11 @@ public class MainWindowViewModel : ViewModelBase
         });
     
         ShowSummaryWindow = new Interaction<FilmList, Unit>();
-
-        var canExecuteSummary = this.WhenAnyValue(x => x.SelectedItem)
-            .Select(film => film != null);
-
+        
         SummaryButton = ReactiveCommand.CreateFromTask(async () =>
         {
             await ShowSummaryWindow.Handle(SelectedItem!);
-        }, canExecuteSummary);
+        });
     }
     
     
