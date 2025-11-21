@@ -62,7 +62,7 @@ public class CharactersWindowViewModel : ViewModelBase
             FilmName = "Aliens (1986)",
             Role = "Jedyna ocalała z kolonii Hadley’s Hope",
             ActorName = "Carrie Henn",
-            Species = "Człowiek",
+            Species = "człowiek",
             BirthYear = 2172
         },
         new CharactersList
@@ -89,7 +89,7 @@ public class CharactersWindowViewModel : ViewModelBase
             FilmName = "Alien: Resurrection (1997)",
             Role = "Klon Ellen Ripley",
             ActorName = "Sigourney Weaver",
-            Species = "Hybryda (Człowiek / Obcy)",
+            Species = "Hybryda (człowiek / Obcy)",
             BirthYear = 2381
         },
         new CharactersList
@@ -116,7 +116,7 @@ public class CharactersWindowViewModel : ViewModelBase
             FilmName = "Alien: Covenant (2017)",
             Role = "Oficer kolonizacyjny",
             ActorName = "Katherine Waterston",
-            Species = "Człowiek",
+            Species = "człowiek",
             BirthYear = 2100
         }
     };
