@@ -5,7 +5,7 @@
         x:Class="apkakosmiczna.Views.MainWindow"
         Title="Filmy"
         x:DataType="viewModels:MainWindowViewModel"
-        Height="1000" Width="1700">
+        Height="1001" Width="1700">
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
